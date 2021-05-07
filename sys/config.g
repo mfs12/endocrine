@@ -45,6 +45,7 @@ M557 X15:215 Y15:195 S20                     ; define mesh grid
 M308 S0 P"temp0" Y"thermistor" T100000 B4138 ; configure sensor 0 as thermistor on pin temp0
 M950 H0 C"out0" T0                           ; create bed heater output on out0 and map it to sensor 0
 M307 H0 B0 S1.00                             ; disable bang-bang mode for the bed heater and set PWM limit
+M307 H0 R0.277 C451.8 D23.8 I0 B0 V23.8      ; configure model for bed heater
 M140 H0                                      ; map heated bed to heater 0
 M143 H0 S80                                  ; set temperature limit for heater 0 to 80C
 M308 S1 P"temp1" Y"thermistor" T100000 B4138 ; configure sensor 1 as thermistor on pin temp1
