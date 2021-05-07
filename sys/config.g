@@ -6,7 +6,7 @@
 ; General preferences
 G90                                          ; send absolute coordinates...
 M83                                          ; ...but relative extruder moves
-M550 P"endocrine"                            ; set printer name
+M550 P"endocrine-wifi"                       ; set printer name
 
 ; Network
 M552 S1                                      ; enable network
