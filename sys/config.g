@@ -9,10 +9,11 @@ M83                                          ; ...but relative extruder moves
 M550 P"endocrine-eth"                       ; set printer name
 
 ; Network
-M552 S1                                      ; enable network
+M552 S1 P10.0.2.2                            ; set static ip address and bring network up
+M553 P255.255.255.0                          ; set netmask
 M586 P0 S1                                   ; enable HTTP
-M586 P1 S0                                   ; disable FTP
-M586 P2 S0                                   ; disable Telnet
+M586 P1 S1                                   ; enable FTP
+M586 P2 S1                                   ; enable Telnet
 
 ; Drives
 M569 P0.0 S1                                 ; physical drive 0.0 goes forwards
