@@ -6,7 +6,7 @@
 ; General preferences
 G90                                          ; send absolute coordinates...
 M83                                          ; ...but relative extruder moves
-M550 P"endocrine-eth"                       ; set printer name
+M550 P"endocrine-acc"                        ; set printer name
 
 ; Network
 M552 S1 P10.0.2.2                            ; set static ip address and bring network up
@@ -68,6 +68,9 @@ G10 P0 X0 Y0 Z0                              ; set tool 0 axis offsets
 G10 P0 R0 S0                                 ; set initial tool 0 active and standby temperatures to 0C
 
 ; Custom settings are not defined
+
+; Accelerometer
+M955 P0 C"io3.out+io3.in"                    ; configure interrrupt pin
 
 ; Miscellaneous
 M575 P1 S1 B57600                            ; enable support for PanelDue
