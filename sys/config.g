@@ -67,6 +67,11 @@ M563 P0 S"HotEnd" D0 H1 F0                   ; define tool 0
 G10 P0 X0 Y0 Z0                              ; set tool 0 axis offsets
 G10 P0 R0 S0                                 ; set initial tool 0 active and standby temperatures to 0C
 
+M563 P1 S"P1" D0 H1 F0                       ; define tool 1
+M563 P2 S"P2" D0 H1 F0                       ; define tool 2
+M563 P3 S"P3" D0 H1 F0                       ; define tool 3
+M563 P4 S"P4" D0 H1 F0                       ; define tool 4
+
 ; Custom settings are not defined
 
 ; Miscellaneous
