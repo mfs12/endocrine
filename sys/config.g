@@ -73,3 +73,4 @@ M575 P1 S1 B57600                            ; enable support for PanelDue
 M501                                         ; load saved parameters from non-volatile memory
 T0                                           ; select first tool
 
+M586 C"*"                                    ; CORS anfragen erlauben
