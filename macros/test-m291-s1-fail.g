@@ -1,0 +1,5 @@
+G1 Z40
+M291 P"S1 message" S1 T60
+G1 Z50
+M400
+M292
