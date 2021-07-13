@@ -70,7 +70,7 @@ G10 P0 R0 S0                                 ; set initial tool 0 active and sta
 ; Custom settings are not defined
 
 ; Miscellaneous
-M575 P1 S1 B57600                            ; enable support for PanelDue
+;M575 P1 S1 B57600                            ; enable support for PanelDue
 M501                                         ; load saved parameters from non-volatile memory
 T0                                           ; select first tool
 
