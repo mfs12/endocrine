@@ -74,4 +74,6 @@ G10 P0 R0 S0                                 ; set initial tool 0 active and sta
 M501                                         ; load saved parameters from non-volatile memory
 T0                                           ; select first tool
 
+M955 P0 I20 S100 R10 C"io3.out+io3.in" Q2000000 ; configure accelerometer
+
 M586 C"*"                                    ; CORS anfragen erlauben
