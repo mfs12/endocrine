@@ -1,5 +1,8 @@
+; home all axis
+G28
+
 ; start sleep job
-M37 P"0:/gcodes/sleep-job.gcode"
+M32 P"0:/gcodes/sleep-job.gcode"
 
 ; wait 5s
 G4 S5
