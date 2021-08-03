@@ -1,6 +1,6 @@
 ; home all axis
 G28
-G92 XYZ
+G92 X0 Y0 Z0
 
 ; start sleep job
 M32 "0:/gcodes/sleep-job.gcode"
