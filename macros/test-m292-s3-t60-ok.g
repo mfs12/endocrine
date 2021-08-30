@@ -1,0 +1,3 @@
+G4 P500
+M291 P"S3 message" S3 T60
+M292

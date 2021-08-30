@@ -1,0 +1,5 @@
+G4 P500
+M291 P"S1 message" S1 T60
+G4 S4
+M400
+M292
