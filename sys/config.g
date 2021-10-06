@@ -48,10 +48,20 @@ M307 H0 B0 S1.00                             ; disable bang-bang mode for the be
 M307 H0 R0.277 C451.8 D23.8 I0 B0 V23.8      ; configure model for bed heater
 M140 H0                                      ; map heated bed to heater 0
 M143 H0 S80                                  ; set temperature limit for heater 0 to 80C
+
 M308 S1 P"temp1" Y"thermistor" T100000 B4138 ; configure sensor 1 as thermistor on pin temp1
 M950 H1 C"out1" T1                           ; create nozzle heater output on out1 and map it to sensor 1
 M307 H1 B0 S1.00                             ; disable bang-bang mode for heater  and set PWM limit
 M143 H1 S250                                 ; set temperature limit for heater 1 to 250C
+
+M308 S2 P"temp1" Y"thermistor" T100000 B4138 ; configure sensor 2 as thermistor on pin temp2
+M950 H2 C"out1" T2                           ; create nozzle heater output on out1 and map it to sensor 1
+M307 H2 B0 S1.00                             ; disable bang-bang mode for heater  and set PWM limit
+M143 H2 S250                                 ; set temperature limit for heater 1 to 250C
+
+; Ventiladores
+M950 F0 C"fan0" Q500 T1:2			; Crear el ventilador 0 en el pin fan0 y establecer su frecuencia
+M106 P0 S1 T45 H1 C"Fan Tool"			; Ponga el nombre y el valor del ventilador 0. El control termostatico esta activado
 
 ; Fans
 M950 F0 C"out3" Q500                         ; create fan 0 on pin out3 and set its frequency
