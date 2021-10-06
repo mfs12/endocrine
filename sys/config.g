@@ -54,25 +54,21 @@ M950 H1 C"out1" T1                           ; create nozzle heater output on ou
 M307 H1 B0 S1.00                             ; disable bang-bang mode for heater  and set PWM limit
 M143 H1 S250                                 ; set temperature limit for heater 1 to 250C
 
-M308 S2 P"temp1" Y"thermistor" T100000 B4138 ; configure sensor 2 as thermistor on pin temp2
-M950 H2 C"out1" T2                           ; create nozzle heater output on out1 and map it to sensor 1
+M308 S2 P"temp2" Y"thermistor" T100000 B4138 ; configure sensor 2 as thermistor on pin temp2
+M950 H2 C"out2" T2                           ; create nozzle heater output on out1 and map it to sensor 1
 M307 H2 B0 S1.00                             ; disable bang-bang mode for heater  and set PWM limit
 M143 H2 S250                                 ; set temperature limit for heater 1 to 250C
 
-; Ventiladores
-M950 F0 C"fan0" Q500 T1:2			; Crear el ventilador 0 en el pin fan0 y establecer su frecuencia
-M106 P0 S1 T45 H1 C"Fan Tool"			; Ponga el nombre y el valor del ventilador 0. El control termostatico esta activado
-
 ; Fans
-M950 F0 C"out3" Q500                         ; create fan 0 on pin out3 and set its frequency
-M106 P0 C"PartCool" S0 H1 T45                ; set fan 0 name and value. Thermostatic control is turned on
+M950 F0 C"out3" Q500 T1                         ; create fan 0 on pin out3 and set its frequency
+M106 P0 C"Fan Part Cool" S0 H1 T45                ; set fan 0 name and value. Thermostatic control is turned on
 M950 F1 C"out4" Q500                         ; create fan 1 on pin out4 and set its frequency
-M106 P1 C"HotEnd" S1 H1 T45                  ; set fan 1 name and value. Thermostatic control is turned on
+M106 P1 C"Fan Hot End" S1 H1 T45                  ; set fan 1 name and value. Thermostatic control is turned on
 M950 F2 C"out5" Q500                         ; create fan 2 on pin out5 and set its frequency
-M106 P2 C"Case" S1 H-1                       ; set fan 2 name and value. Thermostatic control is turned off
+M106 P2 C"Case Fan" S1 H-1                       ; set fan 2 name and value. Thermostatic control is turned off
 
 ; Tools
-M563 P0 S"HotEnd" D0 H1 F0                   ; define tool 0
+M563 P0 S"HotEnd Tool 0" D0 H1:2 F0          ; define tool 0
 G10 P0 X0 Y0 Z0                              ; set tool 0 axis offsets
 G10 P0 R0 S0                                 ; set initial tool 0 active and standby temperatures to 0C
 
